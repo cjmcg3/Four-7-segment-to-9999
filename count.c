@@ -12,7 +12,7 @@ int main(void){
     unsigned char DIG4, DIG3, DIG2, DIG1;
 
     uart_init();
-    DDRC = 0x0F;
+    DDRC = 0x0F;  // To avoid issues with using TX, set lower bits to Analog in (DDRC)
     DDRD = 0xF0;  //pins on the7 segment
     DDRB = 0xFF;   // Digit enable pins (9,10,11,12)
     
